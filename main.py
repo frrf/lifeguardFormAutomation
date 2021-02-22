@@ -4,7 +4,7 @@ from datetime import date
 import time
 
 web = webdriver.Chrome()
-web.get("https://docs.google.com/forms/d/e/1FAIpQLSevs0OMEJAmnybXuqiUCpaSGJigaPUaQzISWkBct2sXi3E9Yw/viewform?fbzx=2146169304140704904")
+web.get("https://docs.google.com/forms/d/e/1FAIpQLSeO73qZVWozM0G717mgEKRIxevYwId7bOMIHS3AD4kayQyURg/viewform?fbzx=-6554247841313198232")
 
 time.sleep(1)
 
@@ -29,11 +29,11 @@ datePicker = web.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[
 datePicker.send_keys(DateToday)
 
 # Facility
-Facility = "Algin Sutton"
 facilityDrop = web.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div[1]/div[1]/div[1]')
 facilityDrop.click()
 time.sleep(1)
-facilitySelect = web.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div[2]/div[3]')
+# Algin Sutton
+facilitySelect = web.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div[2]/div[4]')
 facilitySelect.click()
 time.sleep(1)
 
@@ -55,7 +55,7 @@ submit.click()
 get_confirmation_div_text = web.find_element_by_css_selector('.freebirdFormviewerViewResponseConfirmationMessage')
 print(get_confirmation_div_text)
 
-if((get_confirmation_div_text.text) == 'Your response has been recorded.'):
+if((get_confirmation_div_text.text) == 'Thank you for completing the form.'):
   print("Test Was Successfull")
 else:
   print("Test Was Not Successful")
