@@ -1,0 +1,5 @@
+EmployeeID = "377686"
+LastName = "Rubio Fernandez"
+FirstName = "Francisco"
+PhoneNumber = "323-921-7699"
+RecStaff = "0"
